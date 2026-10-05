@@ -63,7 +63,7 @@ export function ResultCard({ record, index }: { record: PadronRecord; index: num
           <h3 className="mb-3 text-sm font-extrabold uppercase tracking-wide text-slate-700">
             Habilitado para votar en
           </h3>
-          <div className="grid grid-cols-1 gap-2.5 min-[420px]:grid-cols-3">
+          <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3">
             <StatusBadge label="FUL" enabled={isSi(record.ful)} />
             <StatusBadge label="Centro Interno" enabled={isSi(record.centro_interno)} />
             <StatusBadge label="ICU Facultativo" enabled={isSi(record.icu_facultativo)} />
