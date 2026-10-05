@@ -53,32 +53,38 @@ function App() {
   return (
     <>
       {showSplash && <SplashScreen onFinish={() => setShowSplash(false)} />}
-      <div className="min-h-dvh bg-[#f3f8f3]">
-      <header className="no-print relative bg-brand-field">
-        <div className="relative z-10 mx-auto flex max-w-5xl items-center gap-3.5 px-5 py-6 sm:px-8">
-          <Logo />
-          <div>
-            <p className="font-script text-2xl leading-none text-brand-gold-light">Sos vos</p>
-            <h1 className="font-display text-2xl font-extrabold italic leading-tight text-white sm:text-[28px]">
-              Consulta al Padrón Electoral
-            </h1>
+      <div className="min-h-dvh bg-app-field">
+      <header className="no-print bg-brand-field">
+        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-5 py-5 sm:px-8 sm:py-6">
+          <div className="flex items-center gap-3.5">
+            <Logo />
+            <div>
+              <p className="flex items-baseline gap-1.5">
+                <span className="text-xs font-bold uppercase tracking-wide text-white/75 sm:text-sm">
+                  ¿Por qué la U?
+                </span>
+                <span className="font-script text-2xl leading-none text-brand-gold-light">Sos vos</span>
+              </p>
+              <h1 className="font-display text-2xl font-extrabold italic leading-tight text-white sm:text-[28px]">
+                Consulta al Padrón Electoral
+              </h1>
+            </div>
           </div>
+          <img
+            src={mascotLogo}
+            alt="Integración Académica · FUL 2026 - 2028"
+            className="hidden h-20 w-auto shrink-0 drop-shadow-xl md:block md:h-24 lg:h-28"
+          />
         </div>
-        <img
-          src={mascotLogo}
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute right-3 bottom-[-14px] z-10 hidden h-28 w-auto drop-shadow-xl md:right-10 sm:block sm:h-32 lg:h-36"
-        />
       </header>
 
       <main className="mx-auto max-w-5xl px-5 py-7 sm:px-8 sm:py-10">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-[320px_1fr] lg:items-start lg:gap-7">
-          <div className="no-print lg:sticky lg:top-7">
+          <div className="no-print order-2 lg:order-1 lg:sticky lg:top-7">
             <InfoPanel />
           </div>
 
-          <div className="flex flex-col gap-5">
+          <div className="order-1 flex flex-col gap-5 lg:order-2">
             {state.status === 'idle' && (
               <div className="animate-card-in rounded-2xl border border-slate-200/70 bg-white p-5 shadow-card sm:p-7">
                 <div className="mb-5 flex items-center gap-3">

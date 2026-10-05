@@ -44,9 +44,18 @@ body {
   background-image:
     linear-gradient(100deg, rgba(4, 72, 27, 0.55) 0%, rgba(4, 72, 27, 0.15) 45%, rgba(4, 72, 27, 0.55) 100%),
     url("./assets/fondo-textura.png");
-  background-size: cover, cover;
-  background-position: center, center 20%;
-  background-repeat: no-repeat, no-repeat;
+  background-size: cover, 640px auto;
+  background-position: center, center;
+  background-repeat: no-repeat, repeat;
+}
+
+.bg-app-field {
+  background-color: #eef6ef;
+  background-image:
+    linear-gradient(rgba(243, 248, 243, 0.88), rgba(243, 248, 243, 0.88)),
+    url("./assets/fondo-textura.png");
+  background-size: auto, 560px auto;
+  background-repeat: repeat, repeat;
 }
 
 @keyframes card-in {
